@@ -220,6 +220,9 @@ def logout():
     session.pop('user_name', None)   # remove user from session
     return jsonify(msg="You are logged out")
 
+@app.route('/hello')
+def hello():
+    return jsonify(msg='hello everyone')
 
 #400 bad request required fields missing the client
 #401 unauthorized person registered with us but password is wrong
